@@ -12,7 +12,12 @@ body {
 
 /*Header Css*/
 #NavbarNav {
-    background: #ccc !important;
+    background: #333 !important;
+}
+
+#NavbarNav .navbar-brand img {
+    margin-left: 0.5em;
+    padding: 0.25em;    
 }
 
 /*Container Css*/
