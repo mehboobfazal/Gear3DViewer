@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Gear-Bearing 3d Viewer</title>
+        <link href="assets/styles/style.css" rel="stylesheet" />
+        <link href="./assets/styles/bootstrap.min.css" rel="stylesheet" />
+
+        <script src="./assets/scripts/bootstrap.bundle.min.js"></script>
+        <script src="./assets/scripts/jquery-3.5.1.min.js"></script>
+        <script src="./assets/scripts/three.js"></script>
+        <script src="./assets/scripts/orbitcontrols.js"></script>
+        <script src="./assets/scripts/gltfloader.js"></script>
+    </head>
+
+    <body>
+        <div class="container-fluid g-0 h-100 d-flex flex-column">
+            <nav class="navbar sticky-top navbar-light bg-light p-0" id="NavbarNav">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <img src="./assets/images/brand_icon.png" height="50" />
+                    </a>
+                </div>
+            </nav>
+            <div class="container-fluid flex-grow-1 overflow-hidden" id="ContentWrapper">
+                <div class="row h-100 g-0">
+                    <div class="col-6 h-100 p-4 d-flex flex-column leftsection">
+                        <ul class="nav nav-pills headerlinks">
+                            <li class="nav-item m-1" action="view360">
+                                <a class="nav-link p-1 active" href="javascript:void(0)">360<sup>o</sup> View</a>
+                            </li>
+                            <li class="nav-item m-1" action="explode">
+                                <a class="nav-link p-1" href="javascript:void(0)">Explode</a>
+                            </li>
+                            <li class="nav-item m-1" action="cutsection">
+                                <a class="nav-link p-1" href="javascript:void(0)">Cut Section</a>
+                            </li>
+                            <li class="nav-item m-1" action="labelsonoff">
+                                <a class="nav-link p-1" href="javascript:void(0)">Labels</a>
+                            </li>
+                            <li class="nav-item m-1" action="wireframe">
+                                <a class="nav-link p-1" href="javascript:void(0)">Wire Frame</a>
+                            </li>
+                        </ul>
+                        <div class="d-flex flex-grow-1 overflow-auto position-relative">
+                            <div class="spinner-border text-primary position-absolute modelspinner" role="status">
+                                <span class="visually-hidden"></span>
+                            </div>
+                            <div id="ModelViewer"></div>
+                        </div>
+                    </div>
+                    <div class="col-6 h-100 p-4 rightsection">
+                        <table class="table table-sm table-striped h-100 table-bordered d-block overflow-auto">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Select</th>
+                                    <th scope="col">#</th>
+                                    <th scope="col">LINA</th>
+                                    <th scope="col">Diameter[mm]</th>
+                                    <th scope="col">Order Number</th>
+                                    <th scope="col">Mass[g]</th>
+                                    <th scope="col">Inscribed Diameter</th>
+                                    <th scope="col">Width[mm]</th>
+                                    <th scope="col">Height[mm]</th>
+                                    <th scope="col">Basic Dynamic Load Rating</th>
+                                    <th scope="col">Basic Static Load Rating</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">
+                                        <input class="form-check-input" type="radio" name="selectmodel" value="gear1" checked />
+                                    </th>
+                                    <td>1</td>
+                                    <td>TLAM48</td>
+                                    <td>3</td>
+                                    <td>TLAM48</td>
+                                    <td>0.4</td>
+                                    <td>3</td>
+                                    <td>7</td>
+                                    <td>8</td>
+                                    <td>1480</td>
+                                    <td>990</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><input class="form-check-input" type="radio" name="selectmodel" value="gear2" /></th>
+                                    <td>2</td>
+                                    <td>TLAM59</td>
+                                    <td>4</td>
+                                    <td>TLAM59</td>
+                                    <td>0.5</td>
+                                    <td>4</td>
+                                    <td>8</td>
+                                    <td>9</td>
+                                    <td>1800</td>
+                                    <td>1300</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><input class="form-check-input" type="radio" name="selectmodel" value="gear3" /></th>
+                                    <td>3</td>
+                                    <td>TLAM69</td>
+                                    <td>5</td>
+                                    <td>TLAM69</td>
+                                    <td>0.6</td>
+                                    <td>5</td>
+                                    <td>10</td>
+                                    <td>11</td>
+                                    <td>2070</td>
+                                    <td>1600</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="./assets/scripts/script.js"></script>
+    </body>
+</html>
